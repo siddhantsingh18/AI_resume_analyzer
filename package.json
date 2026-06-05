@@ -1,0 +1,12 @@
+{
+  "name": "resume-ai",
+  "version": "1.0.0",
+  "description": "AI-powered resume analyzer – monorepo root",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "private": true
+}

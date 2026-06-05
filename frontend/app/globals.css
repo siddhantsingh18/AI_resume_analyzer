@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #FAFAFC;
+    --primary: #4F46E5;
+    --secondary: #818CF8;
+    --text: #111827;
+    --card: #FFFFFF;
+    --border: #E5E7EB;
+    --muted: #6B7280;
+    --input-bg: #FFFFFF;
+  }
+  .dark {
+    --bg: #0D0D1A;
+    --primary: #6366F1;
+    --secondary: #818CF8;
+    --text: #F1F5F9;
+    --card: #161628;
+    --border: #252540;
+    --muted: #8B92A5;
+    --input-bg: #1C1C35;
+  }
+  * { @apply transition-colors duration-150; }
+  body { background-color: var(--bg); color: var(--text); }
+  html { scroll-behavior: smooth; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-semibold
+      hover:opacity-90 active:scale-95 transition-all duration-150
+      disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100
+      focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply border border-[var(--border)] text-[var(--text)] px-6 py-3 rounded-xl
+      font-semibold hover:bg-[var(--border)] transition-all duration-150
+      focus:outline-none focus:ring-2 focus:ring-[var(--primary)];
+  }
+  .card {
+    @apply bg-[var(--card)] border border-[var(--border)] rounded-2xl shadow-sm;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-[var(--border)]
+      bg-[var(--input-bg)] text-[var(--text)] placeholder-[var(--muted)]
+      focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent
+      transition-all duration-150;
+  }
+  .label { @apply block text-sm font-medium text-[var(--muted)] mb-1.5; }
+  .badge-green {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold
+      bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400;
+  }
+  .badge-red {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold
+      bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400;
+  }
+  .badge-yellow {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold
+      bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
