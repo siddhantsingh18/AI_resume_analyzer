@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 
-const authRoutes = require('./routes/auth');
-const analyzeRoutes = require('./routes/analyze');
+
+const authRoutes = require('./routes/auth ');
+const analyzeRoutes = require('./routes/analyze ');
 
 const app = express();
 
