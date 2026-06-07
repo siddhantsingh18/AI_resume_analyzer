@@ -21,6 +21,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-[var(--card)] border-b border-[var(--border)] shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+    
           {/* Logo */}
           <Link href="/dashboard" className="flex items-center gap-2.5 group">
             <div className="w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center shadow-sm">
