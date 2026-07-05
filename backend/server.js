@@ -26,8 +26,8 @@ app.use((err, req, res, next) => {
 
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
-    console.log('✅ MongoDB connected');
+    console.log('MongoDB connected');
     const PORT = process.env.PORT || 5000;
-    app.listen(PORT, () => console.log(`🚀 Server on port ${PORT}`));
+    app.listen(PORT, () => console.log(`Server on port ${PORT}`));
   })
   .catch(err => { console.error('MongoDB error:', err); process.exit(1); });
