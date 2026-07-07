@@ -8,7 +8,9 @@ import { Mail, Loader2, ArrowLeft, FileText, CheckCircle, ShieldCheck } from 'lu
 import ThemeToggle from '../../components/ThemeToggle';
 import PasswordInput from '../../components/PasswordInput';
 
+
 const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+
 
 export default function ForgotPasswordPage() {
   const router = useRouter();
